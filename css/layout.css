@@ -1,0 +1,273 @@
+/** global element styling **/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    min-width: 450px;
+}
+
+#page-wrapper {
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/** global classes styling **/
+
+.container {
+    /* border: 1px solid brown; */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px solid black;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+}
+
+header {
+    /* border: 1px solid blue; */
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eee;
+    /* flex-wrap: wrap; */ /*put this on media-query 600*/
+}
+
+.logo {
+    /* border: 1px solid green; */
+    width: 60vw;
+}
+
+.logo > img {
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* height: 100%; */ /*don't need this*/
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+/*this flex properties doen't do much but center the logo into its own box, but it is not big enough to make a big differencec*/
+
+    /* background-color: #eee; */ /*don't think these are even needed. double check*/
+    margin-left: 20px;
+}
+
+nav {
+    /* border: 1px solid pink; */
+    /* width: 35vw; makes more sense this being here than in nav ul, does the same thing */
+    font-weight: 400; /*don't thin i need this either*/
+}
+
+nav ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    /*default, not needed to be active*/
+    justify-content: space-around;
+}
+
+nav li {
+    /* border: 1px solid red; */
+    padding-bottom: 5px;
+}
+
+#hero {
+    /* border: 1px solid gold; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
+}
+
+#hero h2 {
+    /* border: 1px solid teal; */
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+form {
+    /* border: 1px solid purple; */
+    /* width: 700px; */ /*could have this be bigger if need my input bar to be longer than default size*/
+}
+
+/*can also target this by its ID*/
+#hero input[type='email'] {
+    /* border: 1px solid red; */
+    max-width: 475px; /*this works in conjunction with width at 100%, could just have a set width as well. width won't go beyond form box*/
+    width: 100%;
+    padding: 5px;
+}
+
+#submit {
+    box-sizing: content-box;
+    /*box sizing works but makes the button longer, don't know why that is yet*/
+    max-width: 125px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: none;
+    background-color: #f1c40f;
+    /* padding-left: 13px; temp solution to center text inside button */
+}
+
+#submit:hover {
+    background-color: orange;
+    transition: background-color 1s;
+}
+
+#features {
+    /* border: 1px solid orangered; */
+    margin-top: 30px;
+}
+
+.grid {
+    /* border: 1px solid skyblue; */
+    /* background-color: #f1c40f; */
+    display: flex;
+}
+
+
+.icon {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: darkorange;
+}
+
+.desc {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
+}
+
+#how-it-works {
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#how-it-works > iframe {
+    max-width: 560px;
+    width: 100%;
+}
+
+#pricing {
+    /* border: 1px solid blue; */
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.product > .level {
+    /* text-align: center; */ /*works here just as well*/
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product h2 {
+    margin-top: 15px;
+}
+
+.product > ol {
+    margin: 15px 0;
+}
+
+.product > ol > li {
+    /* line-height: 2em; */ /*works just the same as line height*/
+    padding: 5px 0;
+}
+
+.product > button {
+    border: none;
+    margin: 15px 0;
+    background-color: #f1c40f;
+    font-weight: 400;
+}
+
+.product > button:hover {
+    background-color: darkorange;
+    transition: background-color 1s;
+}
+
+footer {
+    /* border: 1px solid red; */
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+footer > ul {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px; /*works just like the bottom rule without the gap in the end. aligns all the way to the right*/
+}
+
+footer > ul > li {
+    /* padding: 0 10px; */
+}
+
+footer > span {
+    /* border: 1px solid purple; */
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}

@@ -1,0 +1,80 @@
+@media (max-width: 800px) {
+  #pricing {
+    display: flex; /*don't need display flex since it is already inhereted, just changing the direction*/
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    /* border: 1px solid red; */
+    margin-top: 15px;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */ /*flex direction and align aren't needed to be used together when we can just use justify content*/
+    text-align: center;
+    /* padding: 0 50px; */ /*not needed*/
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav > ul {
+    /* border: 1px solid red; */
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero {
+    /* border: 1px solid red; */
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  #features {
+    /* border: 1px solid green; */
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    /* padding: 0px; */
+    height: 150px;
+  }
+}
